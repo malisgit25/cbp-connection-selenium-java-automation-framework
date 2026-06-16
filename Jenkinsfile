@@ -25,8 +25,7 @@ pipeline {
         always {
         // Publish TestNG results
             junit 'target/surefire-reports/*.xml'
-        }
-        
+            
         // Publish Extent Report in Jenkins UI
             publishHTML([
                 reportDir: 'test-output',
@@ -36,6 +35,8 @@ pipeline {
                 alwaysLinkToLastBuild: true,
                 allowMissing: true
             ])
+        
+        }      
         
 
         success {
