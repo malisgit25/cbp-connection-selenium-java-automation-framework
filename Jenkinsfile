@@ -29,7 +29,7 @@ pipeline {
         // Publish Extent Report in Jenkins UI
             publishHTML([
                 reportDir: 'test-output',
-                reportFiles: 'ExtentReport.html',
+                reportFiles: 'index.html',
                 reportName: 'Extent HTML Report',
                 keepAll: true,
                 alwaysLinkToLastBuild: true,
