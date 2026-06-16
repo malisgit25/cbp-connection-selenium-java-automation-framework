@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
-import com.gdit.utilities.ScreenShotUtility;
+import com.cbp.utilities.ScreenShotUtility;
 
 public class ScreenShotPage {
 	
