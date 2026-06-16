@@ -12,8 +12,10 @@ import com.cbp.reporting.ExtentManager;
 
 public class ExtentListener implements ITestListener {
 
-	private static ExtentReports extent = BaseTest.extent;
+	//private static ExtentReports extent = BaseTest.extent;
 
+	private static ExtentReports extent;
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 

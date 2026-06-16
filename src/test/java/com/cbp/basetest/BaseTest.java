@@ -32,12 +32,13 @@ public class BaseTest {
 	}
 
 	public static void setTest(ExtentTest extentTest) {
-        test = extentTest;
-    }
+		test = extentTest;
+	}
 
-    public static ExtentTest getTest() {
-        return test;
-    }
+	public static ExtentTest getTest() {
+		return test;
+	}
+
 	@BeforeMethod(alwaysRun = true)
 	public void setup() {
 
@@ -77,9 +78,13 @@ public class BaseTest {
 		driver.get(config.getProperty("url"));
 	}
 
-	/*
-	 * @AfterMethod(alwaysRun = true) public void tearDown() {
-	 * 
-	 * if (driver != null) { driver.quit(); driver = null; } }
-	 */
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
+	}
+
 }
