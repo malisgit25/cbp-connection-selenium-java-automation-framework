@@ -23,8 +23,20 @@ pipeline {
 
     post {
         always {
+        // Publish TestNG results
             junit 'target/surefire-reports/*.xml'
         }
+        
+        // Publish Extent Report in Jenkins UI
+            publishHTML([
+                reportDir: 'test-output',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent HTML Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
+            ])
+        
 
         success {
             echo 'Automation tests passed successfully'
